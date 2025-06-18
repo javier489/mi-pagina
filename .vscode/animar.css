@@ -1,0 +1,68 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Asegura que el body ocupe toda la altura de la ventana */
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.cuadrado-animado {
+    width: 100px;
+    height: 100px;
+    background-color: dodgerblue; /* Color inicial del cuadrado */
+    position: relative; /* Necesario para animar 'left' o 'transform' */
+    /* Aplicamos la animación */
+    animation-name: moverYcambiarColor; /* El nombre de nuestra animación */
+    animation-duration: 4s; /* Duración de la animación (4 segundos) */
+    animation-iteration-count: infinite; /* Cuántas veces se repetirá (infinitas veces) */
+    animation-timing-function: ease-in-out; /* Velocidad de la animación (empieza lento, acelera, termina lento) */
+    animation-delay: 1s;
+}
+
+@keyframes moverYcambiarColor {
+    0% {
+        background-color: dodgerblue; /* Color inicial */
+
+        transform: translateX(0); /* Posición inicial: no se mueve horizontalmente */
+    }
+    50% {
+        background-color: orange; /* A la mitad de la animación, cambia a naranja */
+        transform: translateX(150px); /* Se mueve 150px a la derecha */
+    }
+    
+    100% {
+        background-color: dodgerblue; /* Al final, vuelve al color inicial */
+        transform: translateX(0); /* Vuelve a la posición inicial */
+    }
+}
+.cuadrado-a-circulo {
+    width: 100px;
+    height: 100px;
+    background-color: crimson;
+    margin-left: 30px;
+    animation-name: transformarFigura;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-delay: 1s;
+}
+
+/* Nueva animación */
+@keyframes transformarFigura {
+    0% {
+        border-radius: 0%;
+        background-color: crimson;
+        transform: translateX(0);
+    }
+    50% {
+        border-radius: 50%;
+        background-color: mediumseagreen;
+        transform: translateX(150px);
+    }
+    100% {
+        border-radius: 0%;
+        background-color: crimson;
+        transform: translateX(0);
+    }
+}

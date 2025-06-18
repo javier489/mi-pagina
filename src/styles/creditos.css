@@ -1,0 +1,75 @@
+/* Sección de créditos */
+.creditos {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  animation: fadeIn 1s ease-in;
+}
+
+.creditos h1 {
+  font-size: 2.4rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.creditos p {
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.fuentes {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.fuentes li {
+  margin: 8px 0;
+}
+
+.fuentes a {
+  text-decoration: none;
+  color: #0073e6;
+}
+
+.fuentes a:hover {
+  text-decoration: underline;
+}
+
+/* Collage de imágenes */
+.collage {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.col-filtro {
+  width: 200px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+
+.filtro1 { filter: grayscale(1); animation-delay: 0.2s; }
+.filtro2 { filter: sepia(0.7); animation-delay: 0.4s; }
+.filtro3 { filter: brightness(1.2); animation-delay: 0.6s; }
+.filtro4 { filter: contrast(1.4); animation-delay: 0.8s; }
+
+/* Animación general */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
